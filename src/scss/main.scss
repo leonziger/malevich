@@ -1,0 +1,23 @@
+@import 'partials/fonts';
+@import 'partials/variables';
+
+//plugins
+@import "~swiper/dist/css/swiper.min.css";
+
+/* Project style */
+//partials
+@import 'partials/reset';
+@import 'partials/mixins';
+@import 'partials/utilits';
+
+//layout
+@import 'layout/container';
+@import 'layout/socmedia';
+@import 'layout/the-button';
+@import 'layout/modal';
+@import 'layout/section';
+@import 'layout/timeline';
+@import 'layout/header';
+@import 'layout/content';
+@import 'layout/footer';
+@import 'layout/media';

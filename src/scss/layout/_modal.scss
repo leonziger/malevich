@@ -1,0 +1,207 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 200;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  outline: 0;
+  background-color: rgba(#000, 0.75);
+  display: none;
+
+  &-form {
+    position: relative;
+
+    background: #FFF;
+    box-shadow: 0 3px 10px rgba(229, 29, 36, 0.5);
+    border-radius: 10px;
+    padding: 22px 22px 30px 30px;
+
+    &__small {
+      right: 110px;
+      bottom: 180px;
+      position: fixed;
+      display: none;
+      z-index: 101;
+    }
+
+    &__thanks {
+      display: none;
+      right: 110px;
+      bottom: 180px;
+      position: fixed;
+      z-index: 102;
+
+      .modal-form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+
+        &__title {
+          margin-top: 19px;
+          margin-bottom: 22px;
+        }
+        &__subtitle {
+          line-height: 1.71;
+        }
+      }
+    }
+
+    &__close {
+      font-family: $font-family-base;
+      position: absolute;
+      transform: rotate(45deg);
+      right: 10px;
+      top: 3px;
+      color: #000;
+      font-size: 29px;
+      line-height: 1;
+      cursor: pointer;
+    }
+
+    &__title {
+      font-family:$font-family-custom;
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 1.5;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color:$main-first-color;
+      margin-bottom: 5px;
+    }
+
+    &__subtitle {
+      font-family: $font-family-base;
+      font-weight: 300;
+      font-size: 14px;
+      line-height: 1.21;
+      color: #000;
+      letter-spacing: 0.5px;
+      margin-bottom: 10px;
+    }
+
+    &__field {
+      font-family: $font-family-base;
+      font-weight: 300;
+      font-size: 14px;
+      line-height: 1.21;
+      letter-spacing: 0.5px;
+      color: #979797;
+      border: 0;
+      border-bottom: 1px solid #979797;
+      width: 100%;
+      height: 43px;
+      padding: 5px 0 0 !important;
+      margin-bottom: 12px;
+
+      &::placeholder {
+        font-family: $font-family-base;
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 1.21;
+        letter-spacing: 0.5px;
+        color: #979797;
+        border: 0;
+      }
+    }
+
+    &__area {
+      height: 64px;
+      padding: 39px 0 0!important;
+      resize: none;
+    }
+
+    &__submit {
+      width: 250px;
+      height: 43px;
+      color: #000;
+      background-color: #fff;
+      filter: drop-shadow(0px 3px 10px rgba(229, 29, 36, 0.1));
+      border-radius: 170px;
+      margin: 3px auto;
+    }
+
+    &__big {
+
+      &-thanks {
+        .modal-form {
+          width: 490px;
+          height: 576px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+
+          &__title {
+            margin-top: 19px;
+            margin-bottom: 22px;
+          }
+          &__subtitle {
+            line-height: 1.71;
+          }
+        }
+      }
+    }
+  }
+}
+
+.call-form {
+  height: 346px;
+  max-width: 347px;
+  width: 100%;
+}
+.pop-up {
+    box-shadow: none;
+    border: 1px solid #979797;
+    margin: 0 auto;
+    max-width: 490px;
+    width: 100%;
+    padding: 35px 44px 55px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    .modal-form__close {
+      top: 0;
+      right: 7px;
+    }
+    .modal-form__title {
+      font-size: 28px;
+      letter-spacing: -0.1px;
+      text-transform: none;
+      text-align: center;
+      margin-bottom: 2px;
+    }
+
+    .modal-form__subtitle {
+      font-size: 20px;
+      text-align: center;
+      letter-spacing: 0;
+    }
+
+    .modal-form__fields {
+      max-width: 367px;
+      width: 100%;
+      margin: 35px auto 17px;
+    }
+
+    .modal-form__field {
+      padding: 15px 0 0 !important;
+      height: 50px;
+      margin-bottom: 15px;
+    }
+
+    .modal-form__area {
+      height: 64px;
+    }
+
+    .modal-form__submit {
+      width: 280px;
+      height: 48px;
+    }
+  }

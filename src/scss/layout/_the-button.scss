@@ -1,0 +1,27 @@
+.the-button {
+  width: 280px;
+  height: 48px;
+  font-family: "Roboto", sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #FFF;
+  border-radius: 82px;
+  outline: none;
+  background: transparent;
+  border: 2px solid rgba(229, 29, 36, 0.5);
+  filter: drop-shadow(0px 3px 10px rgba(229, 29, 36, 0.5));
+  transition: $transition-base;
+
+  &:hover {
+    background-color: $main-first-color;
+    color: #fff;
+    cursor: pointer;
+  }
+}

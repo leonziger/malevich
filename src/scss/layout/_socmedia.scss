@@ -1,0 +1,38 @@
+.socmedia {
+  display: flex;
+
+  &-item {
+    width: 48px;
+    height: 48px;
+    background: linear-gradient(135deg, #E51D24 0%, #87181A 100%);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 10px;
+
+    &:hover {
+      opacity: 0.7;
+      cursor: pointer;
+    }
+  }
+}
+
+.call-center {
+  width: 80px;
+  height: 80px;
+  position: fixed;
+  z-index: 101;
+  right: 98px;
+  bottom: 80px;
+}
+
+.video-play {
+  position: absolute;
+  left: 90px;
+  bottom: 80px;
+}
+
+span {
+  color: $main-first-color
+}
