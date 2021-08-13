@@ -11,8 +11,8 @@
 <div class="main-wrapper limit-1920">
     <!-- HEADER -->
     <header class="header">
-        <video class="header__video" poster="<%= require('./img/header_bg.jpg') %>">
-            <source class="header__video-iframe" src="<%= require('./img/malevich.mp4') %>" type="video/mp4">
+        <video loop="loop" class="header__video" poster="<%= require('./img/header_bg.jpg') %>"  muted="muted">
+            <source class="header__video-iframe" src="<%= require('./img/malevich30sec.mp4') %>" type="video/mp4">
         </video>
         <div class="header__container">
             <div class="header__top">
@@ -48,8 +48,9 @@
             <div class="header__bottom">
                 <button class="the-button write-us">забронювати дату</button>
             </div>
-            <button class="socmedia-item video-play">
-                <img src="<%= require('./img/play-video.svg') %>" alt="">
+            <button class="socmedia-item video-play pausing">
+                <img src="<%= require('./img/video-play.svg') %>" alt="" class="play">
+                <img src="<%= require('./img/video-pause.svg') %>" alt="" class="pause">
             </button>
 
         </div>
@@ -60,10 +61,6 @@
             <img src="<%= require('./img/call-center.svg') %>" alt="">
         </button>
 
-        <!--- Кнопка прокрутки к верху страницы --->
-        <button id="to_top" class="show">
-            <svg id="sprite-dropdown" viewBox="0 0 1024 1024"><title></title><path d="M18.702 288.029c29.441-36.801 83.14-42.767 119.941-13.327l373.358 298.686 373.354-298.686c36.804-29.441 90.504-23.474 119.944 13.327s23.475 90.501-13.329 119.941L565.308 749.302c-31.165 24.932-75.449 24.932-106.614 0L32.03 407.97c-36.801-29.441-42.767-83.141-13.327-119.941z"></path></svg>
-        </button>
     </header>
     <!-- HEADER END -->
 
@@ -665,6 +662,11 @@
         </div>
     </div>
 </div>
+
+<!--- Кнопка прокрутки к верху страницы --->
+<button id="to_top" class="socmedia-item show">
+    <svg id="sprite-dropdown" viewBox="0 0 1024 1024"><title></title><path d="M18.702 288.029c29.441-36.801 83.14-42.767 119.941-13.327l373.358 298.686 373.354-298.686c36.804-29.441 90.504-23.474 119.944 13.327s23.475 90.501-13.329 119.941L565.308 749.302c-31.165 24.932-75.449 24.932-106.614 0L32.03 407.97c-36.801-29.441-42.767-83.141-13.327-119.941z"></path></svg>
+</button>
 
 <!-- Загрузить в header.php --->
 <div class="icon-load">

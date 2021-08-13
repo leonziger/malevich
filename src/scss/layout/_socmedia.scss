@@ -12,7 +12,7 @@
     margin: 0 10px;
 
     &:hover {
-      opacity: 0.7;
+      box-shadow: 0 10px 30px rgba(229, 29, 36, 0.7);
       cursor: pointer;
     }
   }
@@ -31,6 +31,26 @@
   position: absolute;
   left: 90px;
   bottom: 80px;
+
+  &.pausing {
+    .play {
+      display: block;
+    }
+
+    .pause {
+      display: none;
+    }
+  }
+
+  &.playing {
+    .play {
+      display: none;
+    }
+
+    .pause {
+      display: block;
+    }
+  }
 }
 
 span {

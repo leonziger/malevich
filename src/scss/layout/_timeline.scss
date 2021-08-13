@@ -4,6 +4,11 @@
   max-width: 1200px;
   margin: 0 auto;
 
+  @media(max-width: 1200px) {
+    max-width: 600px;
+    width: 100%;
+  }
+
   &::after { /* Фактическая временная шкала (вертикальная линейка) */
     content: '';
     position: absolute;
@@ -13,6 +18,10 @@
     left: 50%;
     width: 1px;
     height: 340px;
+
+    @media(max-width: 1200px) {
+      display: none;
+    }
   }
 
 
@@ -20,6 +29,10 @@
     position: relative;
     background-color: inherit;
     width: 50%;
+
+    @media(max-width: 1200px) {
+      width: 100%;
+    }
 
     &::after { /* Круги на временной шкале */
       content: '';
@@ -43,6 +56,22 @@
 .left {
   left: 0;
   text-align: right;
+
+  @media(max-width: 1200px) {
+    left: 0;
+    margin: 0 auto 40px;
+    text-align: center;
+
+  }
+
+  &::after {
+    left: -86px;
+
+    @media(max-width: 1200px) {
+      display: none;
+    }
+
+  }
 }
 
 /* Place the container to the right */
@@ -53,8 +82,18 @@
   margin-left: 81px;
   margin-bottom: 24px;
 
+  @media(max-width: 1200px) {
+    left: 0;
+    margin: 0 auto 40px;
+    text-align: center;
+  }
+
   &::after {
     left: -86px;
+
+    @media(max-width: 1200px) {
+      display: none;
+    }
   }
 }
 
@@ -75,31 +114,3 @@
   }
 }
 
-
-/* Медиа-запросы - отзывчивая временная шкала на экранах шириной менее 600 пикселей */
-@media screen and (max-width: 600px) {
-  /* Поместите временную шкалу слева */
-  .timeline {
-    &::after {
-      left: 31px;
-    }
-
-    &-container {
-      width: 100%;
-      padding-left: 70px;
-      padding-right: 25px;
-
-      &::before {
-        left: 60px;
-        border: medium solid white;
-        border-width: 10px 10px 10px 0;
-        border-color: transparent white transparent transparent;
-      }
-    }
-  }
-
-    /* Пусть все правые контейнеры ведут себя как левые */
-  .right {
-    left: 0;
-  }
-}

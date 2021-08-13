@@ -62,9 +62,11 @@ $(function () {
 
             if (headerVideo[0].paused) {
                 headerVideo[0].play();
+                videoPlay.removeClass('pausing').addClass('playing');
             }
             else {
                 headerVideo[0].pause();
+                videoPlay.removeClass('playing').addClass('pausing');
             }
         });
     }
@@ -80,7 +82,7 @@ $(function () {
     });
 
     buttonToTop.click(function (){
-        $('body,html').animate({
+        $('body,html').stop().animate({
             scrollTop:0
         }, 800);
     });
@@ -148,7 +150,7 @@ $(function () {
     $('[href^="#"]').click(function(){
         let link = $(this).attr('href');
         let coordinates = $(link).offset().top-$('.header__top').height();
-        $('html, body').animate({scrollTop:coordinates}, 1000);
+        $('html, body').stop().animate({scrollTop:coordinates}, 1000);
         return false;
     });
 

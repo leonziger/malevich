@@ -2,7 +2,13 @@
 ********************* HEADER *********************
 *************************************************/
 
+.section-gallery {
+  display: none;
+}
+
+
 .header {
+  display: none;
   order: 1;
   -webkit-order: 1;
   position: relative;
@@ -136,16 +142,12 @@
   transform: scale(0);
   width: 48px;
   height: 48px;
-  background: linear-gradient(135deg, #E51D24 0%, #87181A 100%);
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   margin: 0;
   transition: $transition-base;
   z-index: 150;
 
   &:hover {
+    box-shadow: 0 10px 30px rgba(229, 29, 36, 0.7);
     cursor: pointer;
   }
 

@@ -19,6 +19,10 @@
       align-items: center;
       flex-wrap: wrap;
       margin-bottom: -30px;
+
+      @media(max-width: 1200px) {
+        justify-content: center;
+      }
     }
 
     &__option {
@@ -33,6 +37,11 @@
       margin-bottom: 29px;
       padding: 20px;
       transition: $transition-base;
+
+      @media(max-width: 1200px) {
+        margin-left: 10px;
+        margin-right: 10px;
+      }
 
       &-title {
         font-family: $font-family-custom;
@@ -60,12 +69,22 @@
       justify-content: space-between;
       flex-wrap: wrap;
       margin-top: -16px;
+
+      @media(max-width: 1200px) {
+        justify-content: center;
+      }
     }
 
     &__option {
       max-width: 360px;
       width: 100%;
       margin-bottom: 28px;
+
+      @media(max-width: 1200px) {
+        margin-left: 10px;
+        margin-right: 10px;
+        text-align: center;
+      }
 
       &-icon {
         margin-bottom: 12px;
@@ -113,10 +132,19 @@
       max-width: 670px;
       justify-content: flex-end;
       align-items: center;
+
+      @media(max-width: 768px) {
+        justify-content: center;
+        flex-wrap: wrap;
+      }
     }
 
     &__feature {
       display: flex;
+
+      @media(max-width: 768px) {
+        margin-bottom: 10px;
+      }
 
       &-icon {
         margin-right: 22px;
@@ -143,12 +171,21 @@
       color: #000;
       max-width: 488px;
 
+      @media(max-width: 768px) {
+        max-width: 800px;
+      }
+
       &-title {
         font-family: $font-family-custom;
         font-weight: bold;
         font-size: 28px;
         line-height: 1.14;
         margin-bottom: 24px;
+
+        @media(max-width: 1200px) {
+          margin-bottom: 16px;
+        }
+
       }
 
       &-desc {
@@ -285,6 +322,10 @@
     &__option {
       margin-bottom: 31px;
 
+      @media(max-width: 1200px) {
+        text-align: center;
+      }
+
       &-desc{
         font-size: 18px;
         line-height: 28px;
@@ -343,11 +384,21 @@
       display: flex;
       justify-content: space-between;
       flex-wrap: wrap;
+
+      @media(max-width: 1200px) {
+        justify-content: center;
+      }
     }
 
     &__option {
       width: 263px;
       margin-bottom: 22px;
+
+      @media(max-width: 1200px) {
+        margin-left: 10px;
+        margin-right: 10px;
+      }
+
     }
   }
 
