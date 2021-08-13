@@ -46,6 +46,16 @@ module.exports = {
                 }
             },
             {
+                test: /.(mp4|avi|flv)$/,
+                use: {
+                    loader: "file-loader",
+                    options: {
+                        name: '[name].[ext]',
+                        outputPath: 'video',
+                    }
+                }
+            },
+            {
                 test: /\.(woff2?|eot|ttf)/,
                 use: {
                     loader: 'file-loader',

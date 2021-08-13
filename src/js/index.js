@@ -2,6 +2,7 @@ import '../scss/main.scss';
 import 'intersection-observer';
 import $ from 'jquery';
 import Swiper from 'swiper/dist/js/swiper.min';
+import L from 'leaflet';
 
 $(window).on('load', function () {
     let b = $('body');
@@ -13,6 +14,21 @@ $(window).on('load', function () {
     }
 
     b.removeClass('loaded');
+
+    /* leaflet */
+    if ($('#map').length) {
+        const map = L.map('map');
+        const mapCenter = [50.46251377176145, 30.525405151883337];
+        const baseMap = L.tileLayer('http://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}',{
+            maxZoom: 20,
+            subdomains:['mt0','mt1','mt2','mt3']
+        });
+        const markerMap = L.marker(mapCenter).addTo(map).bindPopup('АБУ - Вул. Набережно-хрещатицька 11, м. Київ, 03800');
+        baseMap.addTo(map);
+        if (map) {
+            map.setView(mapCenter, 14).scrollWheelZoom.disable();
+        }
+    }
 });
 
 $(function () {
@@ -36,6 +52,21 @@ $(function () {
                 },
             });
         }
+    }
+
+    /*--- Работа с видео в хедере ---*/
+    const videoPlay = $('.video-play');
+    const headerVideo = $('.header__video');
+    if (headerVideo) {
+        videoPlay.click(function () {
+
+            if (headerVideo[0].paused) {
+                headerVideo[0].play();
+            }
+            else {
+                headerVideo[0].pause();
+            }
+        });
     }
 
     /**--- Отркрытие малой формы при Клике по наушникам ---**/

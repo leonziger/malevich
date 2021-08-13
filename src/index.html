@@ -11,6 +11,9 @@
 <div class="main-wrapper limit-1920">
     <!-- HEADER -->
     <header class="header">
+        <video class="header__video" poster="<%= require('./img/header_bg.jpg') %>">
+            <source class="header__video-iframe" src="<%= require('./img/malevich.mp4') %>" type="video/mp4">
+        </video>
         <div class="header__container">
             <div class="header__top">
                 <div class="header-menu__left">
@@ -560,10 +563,11 @@
         </section>
 
         <section id="contacts" class="section section-contacts">
-            <div class="section-about__option section-contacts__img" style="background: url('<%= require('./img/contact1.png') %>');"></div>
-            <div class="section-about__option section-contacts__img" style="background: url('<%= require('./img/contact2.png') %>');"></div>
-            <div class="section-about__option section-contacts__img" style="background: url('<%= require('./img/contact3.png') %>');"></div>
-            <div class="section-about__option section-contacts__img" style="background: url('<%= require('./img/contact4.png') %>');"></div>
+            <img class="section-contacts__img" src="<%= require('./img/contact1.png') %>" alt="">
+            <img class="section-contacts__img" src="<%= require('./img/contact2.png') %>" alt="">
+            <img class="section-contacts__img" src="<%= require('./img/contact3.png') %>" alt="">
+            <img class="section-contacts__img" src="<%= require('./img/contact4.png') %>" alt="">
+
             <div class="section-contacts__map-before">
                 <div class="container">
                     <div class="section-contacts__title">Є питання? напишіть нам</div>

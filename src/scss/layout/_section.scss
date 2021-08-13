@@ -32,6 +32,7 @@
       text-align: center;
       margin-bottom: 29px;
       padding: 20px;
+      transition: $transition-base;
 
       &-title {
         font-family: $font-family-custom;
@@ -46,6 +47,7 @@
       &:hover {
         background: url(./../img/about_logo.png) center center !important;
         background-size: 100% !important;
+        cursor: pointer;
       }
     }
   }
@@ -377,6 +379,7 @@
 
     &__map {
       height: 300px;
+      width: 100%;
 
       &-before {
         background: #2D2C2C;
