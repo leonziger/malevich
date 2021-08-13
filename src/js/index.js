@@ -87,11 +87,11 @@ $(function () {
                 if (parentDiv.hasClass('active')) {
                     parentDiv.removeClass('active');
                     parentDiv.find('.section-sitting__option-comment').text('Подивитись план');
-                    parentDiv.find('.section-sitting__option-content').slideUp();
+                    parentDiv.find('.section-sitting__option-content').stop().slideUp();
                 } else {
                     parentDiv.addClass('active');
                     parentDiv.find('.section-sitting__option-comment').text('Сховати');
-                    parentDiv.find('.section-sitting__option-content').slideDown();
+                    parentDiv.find('.section-sitting__option-content').stop().slideDown();
                 }
             });
         })

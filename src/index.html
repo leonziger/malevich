@@ -50,6 +50,12 @@
             </button>
 
         </div>
+
+
+        <!--- Кнопка с наушниками --->
+        <button class="socmedia-item call-center">
+            <img src="<%= require('./img/call-center.svg') %>" alt="">
+        </button>
     </header>
     <!-- HEADER END -->
 
@@ -65,7 +71,7 @@
                         <div class="section-about__option-title">Концерти</div>
                         <div class="section-about__option-desc">Найзручніше місце для денних та вечірніх подій різного формату</div>
                     </div>
-                    <div class="section-about__option" style="background:url('<%= require('./img/about_logo.png') %>');">
+                    <div class="section-about__option" style="background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url('<%= require('./img/about.png') %>');">
                         <div class="section-about__option-title">Корпоративні заходи</div>
                         <div class="section-about__option-desc">Найзручніше місце для денних та вечірніх подій різного формату</div>
                     </div>
@@ -601,10 +607,6 @@
     <!-- FOOTER END -->
 </div>
 
-<!--- Кнопка с наушниками --->
-<button class="socmedia-item call-center">
-    <img src="<%= require('./img/call-center.svg') %>" alt="">
-</button>
 
 <!--- Малая форма, которая выскаивает по нажатию на наушники --->
 <div class="modal-form__small">
@@ -654,6 +656,7 @@
     </div>
 </div>
 
+<!-- Загрузить в header.php --->
 <div class="icon-load">
     <picture><img src="<%= require('./img/loader.svg') %>" alt="pre-loader"></picture>
 </div>

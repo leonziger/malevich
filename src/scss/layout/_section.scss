@@ -42,6 +42,11 @@
         letter-spacing: 0.03em;
         margin-bottom: 15px;
       }
+
+      &:hover {
+        background: url(./../img/about_logo.png) center center !important;
+        background-size: 100% !important;
+      }
     }
   }
 
@@ -201,6 +206,7 @@
         display: table;
         white-space: nowrap;
         margin-left: auto;
+        user-select: none;
 
         &:after {
           content: '';
@@ -293,7 +299,7 @@
           li {
             margin: 0 0 4px 0;
             position: relative;
-            
+
             &:before {
               content: '';
               width: 4px;
@@ -309,7 +315,7 @@
         }
       }
     }
-    
+
     &__gallery {
       background: #fff;
 
@@ -342,7 +348,7 @@
       margin-bottom: 22px;
     }
   }
-  
+
   &-contacts {
     padding: 0;
     position: relative;
@@ -457,7 +463,7 @@
         height: 325px;
       }
     }
-    
+
     &__gallery {
       background: #fff;
       padding: 45px 0;
