@@ -69,7 +69,23 @@ $(function () {
         });
     }
 
-    /**--- Отркрытие малой формы при Клике по наушникам ---**/
+    /* button to top */
+    let buttonToTop = $('#to_top');
+    $(window).scroll(function (){
+        if ($(this).scrollTop() > 0){
+            buttonToTop.addClass('show');
+        } else{
+            buttonToTop.removeClass('show');
+        }
+    });
+
+    buttonToTop.click(function (){
+        $('body,html').animate({
+            scrollTop:0
+        }, 800);
+    });
+
+    /**--- Открытие малой формы при Клике по наушникам ---**/
     const callCenter = $('.call-center');
     const modalFormSmall = $('.modal-form__small');
     if (callCenter.length && modalFormSmall.length) {

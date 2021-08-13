@@ -125,3 +125,38 @@
     align-items: center;
   }
 }
+
+#to_top {
+  position: fixed;
+  left: 30px;
+  bottom: 30px;
+  padding: 0;
+  border: none;
+  overflow: hidden;
+  transform: scale(0);
+  width: 48px;
+  height: 48px;
+  background: linear-gradient(135deg, #E51D24 0%, #87181A 100%);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  transition: $transition-base;
+  z-index: 150;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &.show {
+    transform: scale(1);
+  }
+
+  svg {
+    width: 20px;
+    height: 20px;
+    fill: white;
+    transform: rotate(180deg);
+  }
+}
