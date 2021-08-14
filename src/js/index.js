@@ -54,6 +54,45 @@ $(function () {
         }
     }
 
+    // ----------- Прилипаем хедер-меню к экрану -------------------
+
+    const headerTopMenu = $('.header__top-menu');
+    if (headerTopMenu.length) {
+        const coordinats = $('.header').offset().top;
+
+        $(window).scroll(function () {
+            const windowScrollTop = $(window).scrollTop();
+            if (windowScrollTop >= coordinats) {
+                headerTopMenu.addClass('sticky');
+                $('.header__container').removeClass('pb-50');
+                $('.header__logo').hide();
+                $('.header__logo-sticky').addClass('active');
+            }
+            else {
+                headerTopMenu.removeClass('sticky');
+                $('.header__container').addClass('pb-50');
+                $('.header__logo').show();
+                $('.header__logo-sticky').removeClass('active');
+            }
+        });
+    }
+    // ----------- (прилипаем  меню к экрану) -------------------
+
+    /*--- Моб меню ---*/
+    const burger = $('.header__burger');
+    if(burger.length) {
+        burger.click(function() {
+           $('.header__nav').toggleClass('active');
+        });
+    }
+
+    const antiBurger = $('.header-menu__close');
+    if(antiBurger.length) {
+        antiBurger.click(function() {
+            $('.header__nav').toggleClass('active');
+        });
+    }
+
     /*--- Работа с видео в хедере ---*/
     const videoPlay = $('.video-play');
     const headerVideo = $('.header__video');
@@ -78,6 +117,10 @@ $(function () {
             buttonToTop.addClass('show');
         } else{
             buttonToTop.removeClass('show');
+            headerTopMenu.removeClass('sticky');
+            $('.header__container').addClass('pb-50');
+            $('.header__logo').show();
+            $('.header__logo-sticky').removeClass('active');
         }
     });
 
@@ -105,9 +148,9 @@ $(function () {
     }
 
     /*--- Открытие малой формы  через 6000 мс ---*/
-    setTimeout(function(){
-        modalFormSmall.fadeIn('slow','linear');;
-    }, 10000);
+    // setTimeout(function(){
+    //     modalFormSmall.fadeIn('slow','linear');
+    // }, 10000);
 
     /*--- Открытие формы Поп-ап ---*/
     const writeUs = $('.write-us');

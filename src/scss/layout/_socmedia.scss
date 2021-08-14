@@ -23,14 +23,48 @@
   height: 80px;
   position: fixed;
   z-index: 101;
-  right: 98px;
-  bottom: 80px;
+
+  @media(min-width: 1921px) {
+    right: calc(50% - 960px);
+    bottom: 80px;
+  }
+
+  @media(max-width: 1920px) {
+    right: 98px;
+    bottom: 80px;
+  }
+
+  @media(max-width: 1650px) {
+    right: 15px;
+    bottom: 30px;
+  }
+
+  @media(max-width: 768px) {
+    width: 60px;
+    height: 60px;
+    bottom: 20px;
+    right: 10px;
+
+    img {
+      width: 30px;
+      height: 30px;
+    }
+  }
+
 }
 
 .video-play {
   position: absolute;
   left: 90px;
   bottom: 80px;
+
+  @media(max-width: 1650px) {
+    left: 20px;
+  }
+
+  @media(max-width: 768px) {
+    display: none;
+  }
 
   &.pausing {
     .play {
