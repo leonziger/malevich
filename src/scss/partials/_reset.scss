@@ -354,4 +354,8 @@ h2, .h2 {
 body.body-hidden {
   padding-right: 17px;
   overflow: hidden;
+
+  @media(max-width: 992px) {
+    padding-right: 0;
+  }
 }
