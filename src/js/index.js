@@ -83,6 +83,7 @@ $(function () {
     if(burger.length) {
         burger.click(function() {
            $('.header__nav').toggleClass('active');
+            $('.body').toggleClass('body-hidden');
         });
     }
 
@@ -90,6 +91,7 @@ $(function () {
     if(antiBurger.length) {
         antiBurger.click(function() {
             $('.header__nav').toggleClass('active');
+            $('.body').toggleClass('body-hidden');
         });
     }
 
@@ -113,7 +115,7 @@ $(function () {
     /* button to top */
     let buttonToTop = $('#to_top');
     $(window).scroll(function (){
-        if ($(this).scrollTop() > 0){
+        if ($(this).scrollTop() > 50){
             buttonToTop.addClass('show');
         } else{
             buttonToTop.removeClass('show');
