@@ -12,11 +12,9 @@
   color: #fff;
   padding: 71px 0 79px;
   height: 975px;
-  background: linear-gradient(180.29deg, #010101 1.42%, rgba(1, 1, 1, 0.753339) 32.5%, rgba(1, 1, 1, 0.551995) 69.38%, rgba(1, 1, 1, 0) 99.75%), url('./../img/header_bg.jpg');
 
   @media(max-width: 992px) {
     height: 667px;
-    background: linear-gradient(180.29deg, #010101 1.42%, rgba(1, 1, 1, 0.753339) 32.5%, rgba(1, 1, 1, 0.551995) 69.38%, rgba(1, 1, 1, 0) 99.75%), url('./../img/header375_bg.jpg');
   }
 
   @media(max-width: 992px) {

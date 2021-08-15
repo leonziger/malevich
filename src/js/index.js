@@ -54,6 +54,31 @@ $(function () {
         }
     }
 
+    /*--- Меняем в Хедере подложку в зависимости от разрешения экрана ---*/
+    const contactsPage = $('.header');
+    const contactsDesktopBg = contactsPage.data('desktop-bg');
+    const contactsMobileBg = contactsPage.data('mobile-bg');
+    let url;
+
+    function changeBg() {
+
+        if ($(window).width() <= 375 ) {
+            url = contactsMobileBg;
+        }
+
+        if ($(window).width() > 375 ) {
+            url = contactsDesktopBg;
+        }
+
+        contactsPage.css('background', 'linear-gradient(180.29deg, #010101 1.42%, rgba(1, 1, 1, 0.753339) 32.5%, rgba(1, 1, 1, 0.551995) 69.38%, rgba(1, 1, 1, 0) 99.75%), url(./img/' + url + ')');
+    }
+
+    changeBg();
+
+    if (contactsMobileBg && contactsDesktopBg) {
+        $(window).resize(changeBg);
+    }
+
     // ----------- Прилипаем хедер-меню к экрану -------------------
 
     const headerTopMenu = $('.header__top-menu');
