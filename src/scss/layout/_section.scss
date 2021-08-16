@@ -608,6 +608,10 @@
 
 .main-slider {
 
+  @media(max-width: 992px) {
+    padding: 0;
+  }
+
   .swiper {
     &-button-next {
       background-image: url(./../img/slider-arrow.svg);
@@ -616,6 +620,20 @@
       margin-top: -26px;
       right: 34px;
       left: unset;
+
+      @media(max-width: 992px) {
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-size: contain;
+        background-image: url(./../img/arrow-up.svg);
+        border-radius: 50%;
+        border: 1px solid white;
+        transform: rotate(-90deg);
+        right: 1%;
+      }
     }
 
     &-button-prev {
@@ -626,6 +644,20 @@
       margin-top: -26px;
       right: unset;
       left: 32px;
+
+      @media(max-width: 992px) {
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-size: contain;
+        background-image: url(./../img/arrow-up.svg);
+        border-radius: 50%;
+        border: 1px solid white;
+        transform: rotate(90deg);
+        left: 1%;
+      }
     }
 
     &-slide {
