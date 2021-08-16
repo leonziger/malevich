@@ -174,10 +174,10 @@ $(function () {
         });
     }
 
-    /*--- Открытие малой формы  через 6000 мс ---*/
-    // setTimeout(function(){
-    //     modalFormSmall.fadeIn('slow','linear');
-    // }, 10000);
+    /*--- Открытие малой формы  через 10000 мс ---*/
+    setTimeout(function(){
+        modalFormSmall.fadeIn('slow','linear');
+    }, 10000);
 
     /*--- Открытие формы Поп-ап ---*/
     const writeUs = $('.write-us');
