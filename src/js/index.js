@@ -2,7 +2,6 @@ import '../scss/main.scss';
 import 'intersection-observer';
 import $ from 'jquery';
 import Swiper from 'swiper/dist/js/swiper.min';
-import L from 'leaflet';
 
 $(window).on('load', function () {
     let b = $('body');
@@ -15,20 +14,6 @@ $(window).on('load', function () {
 
     b.removeClass('loaded');
 
-    /* leaflet */
-    if ($('#map').length) {
-        const map = L.map('map');
-        const mapCenter = [50.46251377176145, 30.525405151883337];
-        const baseMap = L.tileLayer('http://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}',{
-            maxZoom: 20,
-            subdomains:['mt0','mt1','mt2','mt3']
-        });
-        const markerMap = L.marker(mapCenter).addTo(map).bindPopup('АБУ - Вул. Набережно-хрещатицька 11, м. Київ, 03800');
-        baseMap.addTo(map);
-        if (map) {
-            map.setView(mapCenter, 14).scrollWheelZoom.disable();
-        }
-    }
 });
 
 $(function () {
