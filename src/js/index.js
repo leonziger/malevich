@@ -81,7 +81,7 @@ $(function () {
             url = contactsDesktopBg;
         }
 
-        contactsPage.css('background', 'linear-gradient(180.29deg, #010101 1.42%, rgba(1, 1, 1, 0.753339) 32.5%, rgba(1, 1, 1, 0.551995) 69.38%, rgba(1, 1, 1, 0) 99.75%), url(./img/' + url + ')');
+        contactsPage.css('background', 'linear-gradient(180.29deg, #010101 1.42%, rgba(1, 1, 1, 0.753339) 32.5%, rgba(1, 1, 1, 0.551995) 69.38%, rgba(1, 1, 1, 0) 99.75%), url(' + url + ')');
     }
 
     changeBg();
