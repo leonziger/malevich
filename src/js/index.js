@@ -68,6 +68,7 @@ $(function () {
     /*--- Меняем в Хедере подложку в зависимости от разрешения экрана ---*/
     const contactsPage = $('.header');
     const contactsDesktopBg = contactsPage.data('desktop-bg');
+    const contactsFabletBg = contactsPage.data('fablet-bg');
     const contactsMobileBg = contactsPage.data('mobile-bg');
     let url;
 
@@ -77,7 +78,11 @@ $(function () {
             url = contactsMobileBg;
         }
 
-        if ($(window).width() > 375 ) {
+        if ($(window).width() <= 1650 ) {
+            url = contactsFabletBg;
+        }
+
+        if ($(window).width() > 1650 ) {
             url = contactsDesktopBg;
         }
 
