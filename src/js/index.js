@@ -168,8 +168,9 @@ $(function () {
     const writeUs = $('.write-us');
     if(writeUs.length) {
         writeUs.click(function(){
-            $('.modal').fadeIn('fast','swing');
             $('body').addClass('body-hidden');
+            $('.modal').fadeIn('fast','swing');
+            $('.modal-form__big-thanks').hide();
         });
     }
 
