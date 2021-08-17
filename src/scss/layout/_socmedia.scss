@@ -37,6 +37,11 @@
   }
 
   @media(max-width: 1650px) {
+    right: 142px;
+    bottom: 40px;
+  }
+
+  @media(max-width: 1136px) {
     right: 15px;
     bottom: 30px;
   }
@@ -61,10 +66,11 @@
   bottom: 80px;
 
   @media(max-width: 1650px) {
-    left: 20px;
+    left: 140px;
+    bottom: 40px;
   }
 
-  @media(max-width: 768px) {
+  @media(max-width: 1365px) {
     display: none;
   }
 

@@ -20,6 +20,10 @@
     padding-right: 15px;
     margin-left: auto;
     margin-right: auto;
+
+    @media(max-width: 1650px) {
+      max-width: 1210px;
+    }
   }
 
   &__text {
@@ -28,5 +32,16 @@
     font-size: 18px;
     line-height: 1.55;
     font-weight: 300;
+
+    @media(max-width: 1650px) {
+      margin-right: 20px;
+    }
+    @media(max-width: 1366px) {
+      margin-right: 0;
+    }
+    
+    &:visited {
+      color: #fff;
+    }
   }
 }

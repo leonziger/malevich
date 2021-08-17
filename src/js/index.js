@@ -39,6 +39,32 @@ $(function () {
         }
     }
 
+
+    /*--- Работа с видео в хедере ---*/
+    const videoPlay = $('.video-play');
+    const headerVideo = $('.header__video');
+    if (headerVideo) {
+
+        if (headerVideo[0].paused) {
+            headerVideo[0].play();
+            videoPlay.removeClass('pausing').addClass('playing');
+        } else {
+            headerVideo[0].pause();
+            videoPlay.removeClass('playing').addClass('pausing');
+        }
+
+        videoPlay.click(function () {
+
+            if (headerVideo[0].paused) {
+                headerVideo[0].play();
+                videoPlay.removeClass('pausing').addClass('playing');
+            } else {
+                headerVideo[0].pause();
+                videoPlay.removeClass('playing').addClass('pausing');
+            }
+        });
+    }
+
     /*--- Меняем в Хедере подложку в зависимости от разрешения экрана ---*/
     const contactsPage = $('.header');
     const contactsDesktopBg = contactsPage.data('desktop-bg');
@@ -105,23 +131,6 @@ $(function () {
         });
     }
 
-    /*--- Работа с видео в хедере ---*/
-    const videoPlay = $('.video-play');
-    const headerVideo = $('.header__video');
-    if (headerVideo) {
-        videoPlay.click(function () {
-
-            if (headerVideo[0].paused) {
-                headerVideo[0].play();
-                videoPlay.removeClass('pausing').addClass('playing');
-            }
-            else {
-                headerVideo[0].pause();
-                videoPlay.removeClass('playing').addClass('pausing');
-            }
-        });
-    }
-
     /* button to top */
     let buttonToTop = $('#to_top');
     $(window).scroll(function (){
@@ -170,6 +179,7 @@ $(function () {
         writeUs.click(function(){
             $('body').addClass('body-hidden');
             $('.modal').fadeIn('fast','swing');
+            $('.modal-form__big').fadeIn('fast','swing');
             $('.modal-form__big-thanks').hide();
         });
     }

@@ -1,6 +1,10 @@
 .section {
   padding: 51px 0;
 
+  @media(max-width: 1650px) {
+    padding: 58px 0;
+  }
+
   &-subtitle {
     font-family: $font-family-base;
     font-style: normal;
@@ -36,6 +40,9 @@
       text-align: center;
       margin-bottom: 29px;
       padding: 20px;
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 1.6;
       transition: $transition-base;
 
       @media(max-width: 1200px) {
@@ -51,6 +58,7 @@
         text-align: center;
         letter-spacing: 0.03em;
         margin-bottom: 15px;
+        margin-top: -10px;
       }
 
       &:hover {
@@ -63,6 +71,10 @@
 
   &-vantages {
     padding-bottom: 84px;
+
+    @media(max-width: 1650px) {
+      padding: 44px 0 84px;
+    }
 
     &__options {
       display: flex;
@@ -308,6 +320,10 @@
   &-gallery {
     background: #2D2C2C;
 
+    @media(max-width: 1650px) {
+      padding: 51px 0;
+    }
+
     &__slider {
       margin-top: 52px;
       margin-bottom: 81px;
@@ -330,6 +346,10 @@
 
   &-catering {
     margin-bottom: -60px;
+
+    @media(max-width: 1650px) {
+      padding: 55px 0 48px;
+    }
 
     &__bg {
       position: absolute;
@@ -447,20 +467,20 @@
       }
 
       &:nth-child(1) {
-        left: 210px;
+        left: calc(50% - 750px);
           top: -22px;
         }
       &:nth-child(2) {
         top: 162px;
-        left: 576px;
+        left: calc(50% - 382px);
       }
       &:nth-child(3) {
         top: -48px;
-        left: 1064px;
+        right: calc(50% - 385px);
       }
       &:nth-child(4) {
         top: 184px;
-        left: 1400px;
+        right: calc(50% - 720px);
       }
     }
 
@@ -598,6 +618,10 @@
     &__gallery {
       background: #fff;
       padding: 45px 0;
+
+      @media(max-width: 1650px) {
+        padding: 44px 0;
+      }
 
       .section-gallery__slider {
         margin-bottom: 15px;
